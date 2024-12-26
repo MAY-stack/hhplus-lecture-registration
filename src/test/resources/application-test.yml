@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;LOCK_MODE=3
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true # SQL 쿼리 출력
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        connection:
+          isolation: 3 # Full locks
